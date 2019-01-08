@@ -1,0 +1,52 @@
+*{margin:0;padding:0;bottom:0;background:none; }
+body{font-family:"楷书";font-size:15px;}
+.tt{
+    width:100%;
+	height:570px;
+
+}
+.oo{
+    width:912px;
+	height:530px;
+	margin:0 auto;
+	padding:50px 0 0 66px;
+}
+.oo .pp{
+    width:180px;
+	height:220px;
+	border:1px solid #000000;
+	float: left;
+	background: #FFFF66;
+	margin:0 39px 30px 0;
+	font-size: 14px;
+	color:#9c5132;
+
+}
+.oo .pp span{
+	display: block;
+	padding:2px 0 0 16px; 
+}
+.oo .pp span.ll{color:#FF66CC;}
+.oo .pp span b{
+	font-weight: normal;
+	color:#FF66CC;
+}
+.oo .pp img{
+	margin:15px 15px 5px 15px;
+	width:158px;
+	height:122px;
+}
+.rr{
+	position: relative;
+	top:-8px;
+	width:100%;
+	height:120px;
+    background: url(../甜品作业/footer.png)repeat-x;
+	text-align: center;
+	line-height: 120px;
+	color:#FF0000;
+	font-size: 18px;
+}
+.GG{
+	background:url(timg.jpg);
+}

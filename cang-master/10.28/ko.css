@@ -1,0 +1,318 @@
+*,::before,::after{
+    /* 选择所有的标签 */
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: aqua;
+    /* 设计所有的都是以边框开始计算宽度百分比 */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-size: 10px;
+    font-family: "Microsoft YaHei",sans-serif;
+    color:floralwhite;
+}
+a{
+    
+    color: aqua;
+    text-decoration: none;
+}
+.f_right a{
+    margin-top: 8px;   
+    float: right;
+}
+a:hover{
+    text-decoration: none;
+}
+.hm_header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 1000;
+}
+.hm_header>.hm_header_box{
+    width: 100%;
+    max-width: 640px;
+    min-width: 300px;
+    margin: 0 auto;
+    /* 设置透明度 */
+    background: rgba(201, 21, 35, 0);
+    height: 40px;
+  position: relative;
+}
+.hm_header > .hm_header_box >.icon_logo{
+    width: 60px;
+    height: 36px;
+    position: absolute ;
+    background-position: 0 -103px;
+    top:4px;
+    left: 10px;
+}
+.hm_header>.hm_header_box>.login{
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: blue;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 15px;
+}
+header{
+    
+    background: url(http://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/02/09/ChMkJ1bKzc-IbfReAAvwduqMOHoAALJEQMpdhEAC_CO757.jpg);
+}
+/* .login{
+    margin-top: -25;
+    margin-left: 400px;
+    position:absolute;
+   margin-top: 0px;
+ 
+
+} */
+
+
+ input{
+    border-radius: 15px;
+    height: 35px;
+    width: 250px;
+}
+
+.hm_header > .hm_header_box > form{
+    width: 100%;
+    padding-left: 75px;
+    padding-right: 50px;
+    height: 40px;
+    position: relative;
+}
+.hm_nar{
+   
+    width: 100%;
+    background: firebrick;
+    border-bottom: 1px solid fuchsia;
+
+}
+
+.hm_nav>ul{
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.hm_nav>ul>li{
+width: 25%;
+float: left;
+}
+
+.hm_sk .product_box_con>ul>li>a>img {
+    width: 100%;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.hm_nav>ul>li>a{
+    display: block;
+}
+
+.hm_nav>ul>li>a>img{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hm_nav>ul>li>a>p{
+    text-align: center;
+    color: forestgreen;
+    font-size: 12px;
+    padding: 6px;
+}
+/* 秒杀 */
+.hm_sk{
+
+}
+
+.hm_sk .sk_icon{
+    background: url() no-repeat;
+    background-size: 16px 20px;
+    width: 16px;
+    height: 20px;
+    float: left;
+    margin-top: 6px;
+
+}
+.hm_sk .sk_name{
+    color:antiquewhite;
+font-size: 15px;
+float: left;
+}
+.hm_sk .sk_time{
+    float: left;
+    margin-top: 8px;
+}
+
+/* div #images{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+} */
+img{
+    width: 100%;
+}
+
+#images{
+    /* 子绝父相 */
+    width: 100%;
+    position: relative;
+}
+#images>a{
+    width: 100%;
+    /* transition效果需要指定多少秒或毫秒才能完成 */
+    /* linear 函数用于创建一个线性渐变的 "图像" */
+transition: opacity 1s linear;
+position: absolute;
+top: 0;
+left: 0;
+
+}
+.displayImg{
+    display: block;
+
+    /* Opacity属性设置一个元素了透明度级别 */
+          opacity: 1;
+}
+.hiddenImg{
+/* display: none; */
+
+opacity: 0;
+}
+
+.hm_product{
+    padding: 0 5px;
+}
+/* sfhhhhhhhhhhhh */
+.hm_product> .product_box{
+    width: 100%;
+    background: #fff;
+    margin-top: 130px;
+    box-shadow: 0 0 1px #e0e0e0;
+}
+.hm_product>.product_box>.product_box_tit{
+    height: 32px;
+    line-height: 32px;
+    border-bottom:1px solid #e0e0e0;
+}
+.hm_product>.product_box>.product_box_tit.no_border{
+    border-bottom: none;
+}
+.hm_product>.product_box>.product_box_tit>h3{
+    font-weight: normal;
+    font-size: 15px;
+    padding-left: 20px;
+    position: relative;
+    color: #666;
+}
+.hm_product>.hm_header_box>.product_box_tit>h3::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 3px;
+    height: 12px;
+    background: #d8505c;
+}
+.hm_sk{}
+.hm_sk .sk_icon{
+    background: url("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2486956696,687545127&fm=27&gp=0.jpg")no-repeat;
+    background-size: 16px 20px;
+    width: 16px;
+    height: 20px;
+    float: left;
+    margin-top: 8px;
+}
+.hm_sk .sk_name{
+    margin-top:8px;
+    color: #d8505c;
+    font-size: 15px;
+    float: left;
+}
+.hm_sk .sk_time{
+   
+    float: left;
+    margin-top: 10px;
+}
+.hm_sk .sk_time > span{
+    float: left;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+margin-left: 3px;
+}
+.hm_sk .sk_time>span:nth-child(3n){
+    background: #333;
+    color: #fff;
+    width: 5px;
+}
+.hm_sk .product_box_con>ul{
+width: 100%;
+font-size: 12px;
+padding: 80px 0;
+}
+.hm_sk .product_box_con>ul>li{
+    width: 33.333%;
+    float: left;
+    text-align: center;
+   
+}
+.hm_sk .product_box_con>ul>li>a{
+    display: block;
+    width: 100%;
+    border-right: 1px solid #e0e0e0;
+}
+.hm_sk .product_box_con>ul>li:last-child>a{
+    border-right: 0;
+}
+.hm_sk .product_box_con>ul>li>a>img{
+    height: 50%;
+    width: 64%;
+    display: block;
+    margin:  0 auto;
+}
+.hm_sk .product_box_con>ul>li>p:first-of-type{
+    color: #d8505c;
+    padding-top: 5px;
+}
+.hm_sk .product_box_con>ul>li>p:last-of-type{
+    text-decoration: line-through;
+    color: #666;
+    padding-top: 5px;
+}
+
+h3{
+    font-size: 15px;
+    color:slategray;
+}
+
+.w_50>img {
+    height: 70%;
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+

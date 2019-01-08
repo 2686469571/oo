@@ -1,0 +1,18 @@
+
+h1{
+  font-size: 24px;
+  color: bisque;
+  text-align: center;
+  font-family: "草书";
+  font-style: italic;
+ }
+ p{
+     text-align: center;
+     color: brown;
+     font-style: italic;
+     background: chocolate;
+     line-height: 100%;
+ }
+.oo{
+    color: black;
+}

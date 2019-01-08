@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>菜菜弹性网</title>
+    <style>
+        img{
+            border: 0;
+        }
+
+        .flex-card-image img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 60%;
+    width: 50%;
+    }
+        .demo-display {
+    background:yellowgreen;
+    border-bottom: 3px solid pink;
+    
+}
+.demo-display {
+    margin: 0 auto;
+    padding: 1em 5% 2em;
+    width: 100%;
+}
+.l-fullheight {
+    /* min-height 属性设置元素的最低高度 */
+    min-height: 200vh;
+}
+.demo-display {
+    /* border-box指定宽度和高度（最小/最大属性）确定元素边框box。 */
+    box-sizing: border-box;
+    font-family: europa,sans-serif;
+}
+.flex-card{
+    background:lawngreen;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 0.6em;
+    margin: 10px;
+    
+}
+.flex-card-button{
+    background:goldenrod;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    padding: 1em .40em;
+    /* 去掉下划线 */
+    text-decoration: none;
+    transition:  3s ease;
+    text-align: center;
+}
+
+
+
+        .flexbox .flex-card-list{
+            /* 让弹性盒元素在必要的时候拆行 */
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+          }
+        .flexbox .flex-card-listitem{
+            /* 使用flexbox可以控制卡模块 */
+            display: flex;
+        }
+        /* 将布局调整为每行2张卡 */
+        @media all and (min-width:40em){
+            /* 浮动布局 */
+            .flex-card-list li{
+                width: 50%;
+                list-style-type: none;
+            }
+            /*.no-flexbox*/ .flex-card-list li{
+                float: left;
+                list-style-type: none;
+            }
+        }
+        /* 将布局调整为每行3张卡 */
+        @media all and (min-width:40em) and (max-width:60em){
+            /* 清除每行2个项目的行 */
+             /*.no-flexbox*/ .flex-card-list li:nth-child(2n+1){
+                 clear: both;
+                 list-style-type: none;
+             }
+        }
+        @media all and (min-width:60em){
+            /* flex and non-flex共有的 */
+            .flex-card-list li{
+                width: 33.33%;
+                list-style-type: none;
+            }
+            /* 浮标：每第三项后清除 */
+             /*.no-flexbox*/  
+             .flex-card-list li:nth-child(3n+1){
+                 clear: both;
+                 list-style-type: none;
+             }
+        }
+        .flexbox .flex-card{
+            /* 弹性盒元素的方向为垂直显示 */
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+           
+        }
+        .flexbox .flex-card-content{
+            /* display 设置段落生成一个行内框。 */
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: column;
+        }
+        .flexbox .flex-card-content p{
+            /* lex 属性用于设置或检索弹性盒模型对象的子元素如何分配空间。 */
+            flex: 1 0 auto;
+        }
+     
+    </style>
+</head>
+<body>
+    <figure class="demo-display l-fullheight">
+    <!-- 卡片列表 -->
+    <ul class="flex-card-list">
+        <!-- 卡片列表项 -->
+     <li class="flex-card-listitem">
+         <!-- 卡片模块 -->
+         <div class="flex-card">
+            <!-- 图像管理  -->
+             <div class="flex-card-image">
+              <img src="http://wx2.sinaimg.cn/bmiddle/6e3e5b9bgy1fj25jszifgg208a08a4j9.gif" alt="">
+             </div>
+             <!-- 内容区 -->
+             <div class="flex-card-content">
+              <h3 class="flex-card-heading"></h3>
+              <p>兔子</p>
+              <a href="#" class="flex-card-button">强力摁</a>
+             </div>
+           </div>
+         </li>
+
+         <li class="flex-card-listitem">
+         <div class="flex-card">
+             <div class="flex-card-image">
+              <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540142244768&di=87748e310bb5738aaf6cb8ddfedd6485&imgtype=0&src=http%3A%2F%2Fn1.itc.cn%2Fimg8%2Fwb%2Frecom%2F2016%2F08%2F04%2F147028449671742522.GIF" alt="">
+             </div>
+             <div class="flex-card-content">
+              <h3 class="flex-card-heading"></h3>
+              <p>  兔子啃钥匙</p>
+              <a href="#" class="flex-card-button">强力摁</a>
+             </div>
+           </div>
+         </li>
+
+          <li class="flex-card-listitem">
+         <div class="flex-card">
+             <div class="flex-card-image">
+              <img src="http://hbimg.b0.upaiyun.com/97ec0c6ac84f728d7fb197c9a7fa26d5d9316f1c3e8ecd-AqxZkF_fw658" alt="">
+             </div>
+             <div class="flex-card-content">
+              <h3 class="flex-card-heading"></h3>
+              <p>  兔子开心一笑</p>
+              <a href="#" class="flex-card-button">强力摁</a>
+             </div>
+           </div>
+         </li>
+
+             <li class="flex-card-listitem">
+         <div class="flex-card">
+             <div class="flex-card-image">
+              <img src="http://n1.itc.cn/img8/wb/recom/2016/08/04/147028449167159844.GIF" alt="">
+             </div>
+             <div class="flex-card-content">
+              <h3 class="flex-card-heading"></h3>
+              <p>兔子真帅</p>
+              <a href="#" class="flex-card-button">强力摁</a>
+             </div>
+           </div>
+         </li>
+         <li class="flex-card-listitem">
+            <div class="flex-card">
+                <div class="flex-card-image">
+                 <img src="http://b-ssl.duitang.com/uploads/item/201609/05/20160905204810_h4jz8.thumb.700_0.gif" alt="">
+                </div>
+                <div class="flex-card-content">
+                 <h3 class="flex-card-heading"></h3>
+                 <p>兔子学车</p>
+                 <a href="#" class="flex-card-button">强力摁</a>
+                </div>
+              </div>
+            </li>
+            <li class="flex-card-listitem">
+                <div class="flex-card">
+                    <div class="flex-card-image">
+                     <img src="http://n1.itc.cn/img8/wb/recom/2016/08/03/147023467733313095.GIF" alt="">
+                    </div>
+                    <div class="flex-card-content">
+                     <h3 class="flex-card-heading"></h3>
+                     <p>萝卜钥匙开门</p>
+                     <a href="#" class="flex-card-button">强力摁</a>
+                    </div>
+                  </div>
+                </li>
+  
+    </ul>
+</figure>
+</body>
+</html>

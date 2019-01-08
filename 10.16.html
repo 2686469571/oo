@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>菜菜网转字</title>
+	<style>
+	body{
+		/* 简写属性在一个声明中设置所有填充属性。该属性可以有1到4个值。上左下右 */
+		padding:200px;
+		color:brown;
+	}
+	span{
+		font-size: 100px;
+		font-family: "楷体";
+		/* 属性指定一个元素（静态的，相对的，绝对或固定）的定位方法的类型。 */
+		position: relative;
+	}
+	span:before,span:after{
+		content:attr(data-q);
+		
+/* 	absolute生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。 */
+		position: absolute;
+		left: 0;
+		top: 0;
+		/* transform-Origin属性允许您更改转换元素的位置。 */
+
+/* 2D转换元素可以改变元素的X和Y轴。 3D转换元素，还可以更改元素的Z轴。 */
+		transform-origin: left center;
+		transition:all 0.3s linear 0s;
+	}
+	/* :before 选择器向选定的元素前插入内容。 */
+	span:before{
+		color:bisque;
+		/* 属性指定一个元素的堆叠顺序 */
+		z-index: 3;
+		transform:rotateY(15deg);
+	}
+	/* :after 选择器向选定的元素之后插入内容。 */
+	span:after{
+		color:slategray;
+		z-index:2;
+		transform: rotateY(0deg) scale(1.1, 1);
+	}
+	/* 元素之前插入内容 */
+	span:hover:before{
+		transform:rotateY(40deg) skew(0deg, 3deg);
+	}
+	span:hover:after{
+		transform:rotateY(40deg) skew(0deg,20deg);
+	}
+	</style>
+</head>
+<body>
+	<span data-q="落">落</span>
+	<span data-q="霞">霞</span>
+	<span data-q="与">与</span>
+	<span data-q="孤">孤</span>
+	<span data-q="鹜">鹜</span>
+	<span data-q="齐">齐</span>
+	<span data-q="飞">飞</span>
+</body>
+</html>

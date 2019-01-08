@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Document</title>
+
+</head>
+<body>
+    <script src="sho.js"></script>
+  <script> 
+  
+
+var cart=new ShoppingCart();
+  
+   var p=new Product("01","养鸡人","01.jpg",22);
+   var order=new Order(p,2,true);
+   cart.addToCart(order);
+ 
+   var p=new Product("02","养鸭人","02.jpg",50);
+  var order=new Order(p,5,true);
+  cart.addToCart(order);
+// 向购物车添加订单
+
+
+
+// console.log(title);
+
+// console.log(cartData);
+  // 创建购物车类
+
+
+  // cart.getSelecredQty();
+cart.clearCart();
+cart.addToCart(order);
+// 将购物车数据写入本地存储中
+// cartData.setDataToLocalSatorge(cartData);
+// 清除原有存储写入新列表
+// localStorage.removeItem('caicaiwang');
+
+
+  </script>
+
+
+
+</body>
+</html>

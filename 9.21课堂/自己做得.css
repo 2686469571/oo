@@ -1,0 +1,39 @@
+*{margin:0;padding:0;bottom:0;background:none; }
+body{font-family:"楷书";font-size:15px;}
+.oo{
+    widows: 980px;
+    height: 730px;
+    background: #ff000f;
+}
+.pp{
+     widows:912px;
+     height:530px;
+     margin:0 auto;
+     padding:50px 0 0 66px;
+
+}
+.pp .ii{
+    widows: 150px;
+    height: 220px;
+    border: 1px solid #000000;
+    font-size: 14px;
+    float: left;
+     /* 中间的间隔设置，外边距作用在区域的框 */
+    margin: 10px 39px 30px 0;
+    background: #00da00;
+    color:#FFFF66;
+   
+}
+.pp .ii span{
+    display: block;
+    padding: 2px 0 0 16px;
+}
+.pp .ii img{
+    margin: 15px 15px 5px 15px;
+    widows: 158px;
+    height: 122px;
+}
+.pp .ii span.uu{
+    color: aqua;
+}
+

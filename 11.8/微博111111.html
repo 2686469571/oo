@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微博样式</title>
+    <script>
+            window.onload=function(){
+                // window是一个窗口
+                // onload是一个事件  当页面加载完成时启用
+                // function声明一个函数  可以在调用时调用
+                var uploadBtn=document.getElementById("wei");
+                // document.getElementById 返回对拥有指定 id 的第一个对象的引用。
+    
+                var newTxt=document.getElementById("new");
+    
+                var contentUl=document.createElement("ul");
+                uploadBtn.parentNode.appendChild(contentUl);
+                uploadBtn.onclick=function(){
+                    var newLi=document.createElement("li");
+                    if(newTxt.value==""){
+                        window.alert("发布的内容不能为空");
+                        return false;
+                    }
+                    newLi.innerHTML=newTxt.value;
+                    var delLink=document.createElement("a");
+                    delLink.href="#";
+                    delLink.innerHTML="删除";
+                    delLink.onclick=function(){
+                        contentUl.removeChild(this.parentNode);
+                    }
+                    newLi.appendChild(delLink);
+                    if(contentUl.hasChildNodes()){ contentUl.insertBefore(newLi,contentUl.firstChild);
+                    console.log(contentUl.childNodes)}
+                    else contentUl.appendChild(newLi);
+                    newTxt.value="";
+                }
+            }
+        </script>
+        <!-- JS结束 -->
+    </head>
+    <body>
+    <div class="box" id="weiboArea">
+        微博发布: <textarea name="" id="new" cols="30" rows="10"></textarea>  <button id="wei">发布</button>
+    
+    </div>
+    </body>
+    </html>
